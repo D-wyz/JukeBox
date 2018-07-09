@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+
+<head>
+<meta charset='utf-8'>
+<title>JQuery Intro</title>
+</head>
+
+<body>
+    <p class="hide-test">This p should be hidden</p>
+    <p>This on should stay visible</p>
+    <p class="hide-test">This p should also be hidden</p>
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+    // create a JQuery collection with just the global document object
+    $(document).ready(function(){
+        $("p").click(function(){
+            //hide on click
+          $(this).hide();
+        })
+       $(".hide-test").hide();
+    })
+ 
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+
+<head>
+<meta charset='utf-8'>
+<title>jCarousel</title>
+
+<style>
+    .any-class {
+        display: inline-block;
+    }
+    .any-class img {
+        margin: 10px;
+        border: 5px solid #BBB;
+        border-radius: 15px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<button class="prev">&laquo;</button>
+
+<div class="any-class">
+        <ul>
+            <li>
+                <img src="images/albumArt/AlmostFamous.jpg" style="width:130px; height:118px;">
+            </li>
+            <li>
+                <img src="images/albumArt/BobMarleyLIVE.jpg" style="width:130px; height:118px;">
+            </li>
+            <li>
+                <img src="images/albumArt/Doors.jpg" style="width:130px; height:118px;">
+            </li>
+            <li>
+                <img src="images/albumArt/ElectricLadyland.jpg" style="width:130px; height:118px;">
+            </li>
+            <li>
+                <img src="images/albumArt/FullMoonFever.jpg" style="width:130px; height:118px;">
+            </li>
+                        <li>
+                <img src="images/albumArt/HotelCalifornia.jpg" style="width:130px; height:118px;">
+            </li>
+            <li>
+                <img src="images/albumArt/OnBroadway.jpg" style="width:130px; height:118px;">
+            </li>
+            <li>
+                <img src="images/albumArt/Quadrophenia.jpg" style="width:130px; height:118px;">
+            </li>
+            <li>
+                <img src="images/albumArt/Revolver.jpg" style="width:130px; height:118px;">
+            </li>
+            <li>
+                <img src="images/albumArt/SaturdayNightFever.jpg" style="width:130px; height:118px;">
+            </li>
+            <li>
+                <img src="images/albumArt/STPThankYou.jpg" style="width:130px; height:118px;">
+            </li>
+            <li>
+                <img src="images/albumArt/WhosNext.jpg" style="width:130px; height:118px;">
+            </li>
+        </ul>
+    </div>
+    <button class="next">&raquo;</button>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/jquery.jcarousellite.js"></script>
+<script>
+    $(function () {
+        $(".any-class").jCarouselLite({
+            btnNext: ".next",
+            btnPrev: ".prev",
+            auto: 800,
+            speed: 1000,
+            circular: true,  // loop
+            visible: 4
+            //afterEnd: function()  //callback function
+        });
+    });
+
+</script>
+
+</body>
+</html>
