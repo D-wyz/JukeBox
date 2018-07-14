@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+
+<head>
+<meta charset='utf-8'>
+<title>jCarousel</title>
+
+<style>
+    .any-class {
+        display: inline-block;
+    }
+    .any-class img {
+        margin: 10px;
+        border: 5px solid #BBB;
+        border-radius: 15px;
+    }
+    #app {
+        height: 1080px;
+        background-image: url('images/jukebox-interface.jpg');
+    }
+</style>
+
+</head>
+
+<body>
+    <div id='app'></div>
+
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/jquery.jcarousellite.js"></script>
+<script src="js/class/Jukebox.js"></script>
+<script>
+    $(function () {
+        $(".any-class").jCarouselLite({
+            btnNext: ".next",
+            btnPrev: ".prev",
+            auto: 800,
+            speed: 1000,
+            circular: true,  // loop
+            visible: 4
+            //afterEnd: function()  //callback function
+        });
+    });
+const juke = new Jukebox('app');
+</script>
+
+</body>
+</html>
